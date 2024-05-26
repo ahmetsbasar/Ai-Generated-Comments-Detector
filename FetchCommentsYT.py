@@ -50,7 +50,7 @@ def save_comments_to_csv(comments, filename):
             writer.writerow([comment])  # Writing each comment
 
 # Example usage
-api_key = 'AIzaSyAWeA4VC7DRPTNjbDolr7VJ3HR_4-BIOyM'
+api_key = 'api-key'
 video_id = '-5bcG6tZKx8'
 print("Starting to fetch comments...")
 comments = get_youtube_comments(video_id, api_key)
