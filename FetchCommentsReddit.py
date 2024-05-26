@@ -31,8 +31,8 @@ def save_comments_to_csv(comments, filename):
             writer.writerow([comment])  
 
 
-client_id = 'SdDmei5Wlx0g2HBlLnFxHA'
-client_secret = 'ALYiwrwYFT0bfoIXZ1MFeZX3muVe0w'
+client_id = 'client-id'
+client_secret = 'client-secret'
 user_agent = 'CommentExtractor by /u/yourusername'
 subreddit_name = 'football'  
 
