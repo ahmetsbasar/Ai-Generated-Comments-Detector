@@ -3,10 +3,18 @@ import pandas as pd
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.linear_model import LogisticRegression
 import joblib
+import os
+
+# Get the current directory of the script
+current_dir = os.path.dirname(__file__)
+
+# Construct the relative paths to the pkl files
+tfidf_vectorizer_path = os.path.join(current_dir, 'tfidf_vectorizer.pkl')
+logistic_regression_model_path = os.path.join(current_dir, 'logistic_regression_model.pkl')
 
 # Load the TF-IDF vectorizer and logistic regression model
-tfidf_vectorizer = joblib.load('/Users/ahmetsbasar/Desktop/DetectingAIGeneratedComments/tfidf_vectorizer.pkl')
-logistic_regression_model = joblib.load('/Users/ahmetsbasar/Desktop/DetectingAIGeneratedComments/logistic_regression_model.pkl')
+tfidf_vectorizer = joblib.load(tfidf_vectorizer_path)
+logistic_regression_model = joblib.load(logistic_regression_model_path)
 
 def preprocess_comment(comment):
     # Preprocess the input comment
